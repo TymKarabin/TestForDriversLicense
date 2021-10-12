@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+    </head>
+    <body>
+        <h1 style="color:lime;background:grey;text-align:center;font-size:91px">Test for Drivers Licence in Alberta! 🚗</h1>
+        <h3 id="number" style="color:darkblue;text-align:left;font-size:45px"><u>Question #1</u></h3>
+        <h4 style="color:darkblue;text-align:left;font-size:22px">(Multiple Question)</h4>
+        <p id="paragraph" style="color:darkblue;text-align:left;font-size:30px"><i><b>How are you???</b></i></p>
+        <ol id="answer">
+            <li>Good!!!</li>
+            <li>Bad :(</li>
+            <li>So So -_-</li>
+            <li>AMAZING!!!</li>
+        </ol>
+        <select id="rectangle" style="font-size:34px">
+            <option value = "one">1</option>
+            <option value = "two">2</option>
+            <option value = "three">3</option>
+            <option value = "four">4</option>
+        </select>
+        <button id="button" style="font-size:34px">SUBMIT</button>
+        <div id="urAnswer"></div>
+        <script>
+            document.getElementById("button").onclick = f1;
+            function f1(){
+                
+                document.getElementById("paragraph").innerHTML = "<i><b>What is the whether???</b></i>";
+                let text1 = document.getElementById("rectangle").value;
+                document.getElementById("rectangle").value="";
+                document.getElementById("number").innerHTML = "<u>Question #2</u>";
+                document.getElementById("answer").innerHTML = "<li>Rain</li> <li>Snow</li> <li>Cloudy</li> <li>Sunny!!!</li>";
+                if (text1=="three"){
+                    document.getElementById("urAnswer").innerHTML = "<h2 style='color:lime'>GOOD JOB!!!!!!!!!!!!!</h2>";
+                }
+                else{
+                    document.getElementById("urAnswer").innerHTML = "<h2 style='color:red'>You Answeered Wrrong!!!! :(</h2>";
+                }
+            }
+        </script>
+    </body>
+</html>
